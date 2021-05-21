@@ -3,12 +3,10 @@ class Book extends HTMLElement {
   constructor() {
     super();
 
-    // attribute content 
-    const title       = this.getAttribute('title');
-    const subtitle    = this.getAttribute('subtitle');    
-    const author      = this.getAttribute('author');    
-    const publisher   = this.getAttribute('publisher');    
-    const description = this.getAttribute('description');        
+  }    
+
+  
+set book(book){
 
     this.innerHTML = `
         <div class="card">
@@ -19,23 +17,23 @@ class Book extends HTMLElement {
                 <table class="table">
                     <tr>
                         <td class="text-success font-weight-bold">Title:</td>
-                        <td>${title}</td>
+                        <td>${book.title}</td>
                     </tr>
                     <tr>
                         <td class="text-success font-weight-bold">Subtitle:</td>
-                        <td>${subtitle}</td>
+                        <td>${book.subtitle}</td>
                     </tr>
                     <tr>
                         <td class="text-success font-weight-bold">Author:</td>
-                        <td>${author}</td>
+                        <td>${book.author}</td>
                     </tr>
                     <tr>
                         <td class="text-success font-weight-bold">Publisher:</td>
-                        <td>${publisher}</td>
+                        <td>${book.publisher}</td>
                     </tr>
                     <tr>
                         <td class="text-success font-weight-bold">Description:</td>
-                        <td>${description}</td>
+                        <td>${book.description}</td>
                     </tr>
                 </table>
                 </p>
